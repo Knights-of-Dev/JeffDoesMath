@@ -1,5 +1,6 @@
 import tkinter as tk
 import random
+import math
 #functions
 
 dumbness = 20
@@ -45,40 +46,49 @@ def solve():
     global jeffsayings
     x = entrybox.get()
     x = x.split()
-    if len(x) == 3:
-        a = int(x[0])
-        s = x[1]
-        b = int(x[2])
-
+    if x[0] == "r" or x[0] == "R":
+        a = int(x[1])
+        a = math.radians(a)
+        awnser.config(text = a)
+    elif x[0] == "d" or x[0] == "D":
+        a = int(x[1])
+        a = math.degrees(a)
+        awnser.config(text = a)
+    else:
+        if len(x) == 3:
+            a = int(x[0])
+            s = x[1]
+            b = int(x[2])
     
-
-        if s == "+":
-            d = add(a, b)
-            t = True
-        elif s == "-":
-            d = minus(a, b)
-            t = True
-        elif s == "*":
-            d = times(a, b)
-            t = True
-        elif s == "/" or s == "%":
-            d = divide(a, b)
-            t = True
+        
+    
+            if s == "+":
+                d = add(a, b)
+                t = True
+            elif s == "-":
+                d = minus(a, b)
+                t = True
+            elif s == "*":
+                d = times(a, b)
+                t = True
+            elif s == "/" or s == "%":
+                d = divide(a, b)
+                t = True
+            else:
+                t = False
+                d = list(jeffsayings)[0]
+                awnser.config(text = d)
+        
+            if t == True:
+                isdumb = random.randint(1,10)
+                if isdumb == 1:
+                    d = messup(d)
+                    awnser.config(text = d)
+                else:
+                    awnser.config(text = d)
         else:
-            t = False
             d = list(jeffsayings)[0]
             awnser.config(text = d)
-    
-        if t == True:
-            isdumb = random.randint(1,10)
-            if isdumb == 1:
-                d = messup(d)
-                awnser.config(text = d)
-            else:
-                awnser.config(text = d)
-    else:
-        d = list(jeffsayings)[0]
-        awnser.config(text = d)
 
 
     
