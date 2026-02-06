@@ -97,6 +97,24 @@ def solve():
         if random.randint(1,chanceofmess) == 1:
             a =  messup(a)
         awnser.config(text = a)
+    elif x[0] == "asin" or x[0] == "arcsin":
+        a = x[1]
+        a = math.asin(a)
+        if random.randint(1,chanceofmess) == 1:
+            a =  messup(a)
+        awnser.config(text = a)
+    elif x[0] == "acos" or x[0] == "arccos":
+        a = x[1]
+        a = math.acos(a)
+        if random.randint(1,chanceofmess) == 1:
+            a =  messup(a)
+        awnser.config(text = a)
+    elif x[0] == "atan" or x[0] == "arctan":
+        a = x[1]
+        a = math.atan(a)
+        if random.randint(1,chanceofmess) == 1:
+            a =  messup(a)
+        awnser.config(text = a)
     else:
         if len(x) == 3:
             if x[0] == "pi":
