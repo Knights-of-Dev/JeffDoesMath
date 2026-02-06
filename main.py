@@ -45,11 +45,12 @@ def solve():
     global jeffsayings
     x = entrybox.get()
     x = x.split()
-    a = int(x[0])
-    s = x[1]
-    b = int(x[2])
-
     if len(x) == 3:
+        a = int(x[0])
+        s = x[1]
+        b = int(x[2])
+
+    
 
         if s == "+":
             d = add(a, b)
@@ -96,9 +97,9 @@ awnser = tk.Label(root, text = list(jeffsayings)[0])
 
 #add widget to windows :3
 exitb.place(x=175, y=250)
-entrybox.place(x= 0, y=75)
-solvebutton.place(x=0, y=100)
-awnser.place(x=0, y=25)
+entrybox.place(x= 0, y=250)
+solvebutton.place(x=0, y=275)
+awnser.place(x=0, y=200)
 
 
 
