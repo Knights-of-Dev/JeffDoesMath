@@ -10,11 +10,16 @@ jeffsayings = {"mrrrrrp", "grrrrrr", "murp", "gurp", "RAWR", "MRRRRRRRRRf"}
 def leave():
     root.destroy()
 
-def messup(a):
+def messup(d):
+    
     global dumbness
+    global jeffsayings
     x = random.randint(-dumbness,dumbness)
     if x == 0:
         x = list(jeffsayings)[0]
+    else:
+        x = d + x
+    x = str(x)
     return x
 
 def add(a, b):
@@ -34,6 +39,7 @@ def divide(a, b):
     return x
 
 def solve():
+    global jeffsayings
     x = entrybox.get()
     x = x.split()
     a = int(x[0])
@@ -41,16 +47,32 @@ def solve():
     b = int(x[2])
 
     if s == "+":
-        d = add(a, b))
+        d = add(a, b)
+        t = True
     elif s == "-":
         d = minus(a, b)
+        t = True
     elif s == "*":
         d = times(a, b)
+        t = True
     elif s == "/" or s == "%":
         d = divide(a, b)
+        t = True
     else:
-        d = "Error"
+        t = False
+        d = list(jeffsayings)[0]
         awnser.config(text = d)
+
+    if t == True:
+        isdumb = random.randint(1,2)
+        if isdumb == 1:
+            d = messup(d)
+            awnser.config(text = d)
+        else:
+            awnser.config(text = d)
+
+
+    
 
 
 #window set up / settings
