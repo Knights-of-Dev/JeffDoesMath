@@ -5,7 +5,7 @@ import math
 
 dumbness = 20
 
-jeffsayings = {"mrrrrrp", "grrrrrr", "murp", "gurp", "RAWR", "MRRRRRRRRRf", "BLAARGGULARG", "AHHHHbabababababa", "eaaaarrrgghhh", "*shows Ming the Cowculator at https://github.com/Knights-of-Dev/Ming-the-Cowculator*"}
+jeffsayings = {"mrrrrrp", "grrrrrr", "murp", "gurp", "RAWR", "MRRRRRRRRRf", "BLAARGGULARG", "AHHHHbabababababa", "eaaaarrrgghhh", "*shows Ming the Cowculator at https://github.com/Knights-of-Dev/Ming-the-Cowculator*", "glup", "yes math", "no math", "deadpool fren", "gwenpool fren", "I avenger", "grrrr", "I AM VENOMMMMMM"}
 
 chanceofmess = 10
 
@@ -60,11 +60,56 @@ def solve():
         if random.randint(1,chanceofmess) == 1:
             a =  messup(a)
         awnser.config(text = a)
+    elif x[0] == "√" or x[0] == "sqrt":
+        a = int(x[1])
+        a = math.sqrt(a)
+        if random.randint(1,chanceofmess) == 1:
+            a =  messup(a)
+        awnser.config(text = a)
+    elif x[0] == "3√" or x[0] == "cbrt":
+        a = int(x[1])
+        a = math.cbrt(a)
+        if random.randint(1,chanceofmess) == 1:
+            a =  messup(a)
+        awnser.config(text = a)
+    elif x[0] == "^" or x[0] == "pow":
+        a = int(x[1])
+        b = int(x[2])
+        s = math.pow(a, b)
+        if random.randint(1,chanceofmess) == 1:
+            s =  messup(s)
+        awnser.config(text = s)
+    elif x[0] == "sin":
+        a = x[1]
+        a = math.sin(a)
+        if random.randint(1,chanceofmess) == 1:
+            a =  messup(a)
+        awnser.config(text = a)
+    elif x[0] == "cos":
+        a = x[1]
+        a = math.cos(a)
+        if random.randint(1,chanceofmess) == 1:
+            a =  messup(a)
+        awnser.config(text = a)
+    elif x[0] == "tan":
+        a = x[1]
+        a = math.tan(a)
+        if random.randint(1,chanceofmess) == 1:
+            a =  messup(a)
+        awnser.config(text = a)
     else:
         if len(x) == 3:
-            a = int(x[0])
+            if x[0] == "pi":
+                a = math.pi
+            else:
+                a = int(x[0])
+                
             s = x[1]
-            b = int(x[2])
+            
+            if x[2] == "pi":
+                b = math.pi
+            else:
+                b = int(x[2])
     
         
     
