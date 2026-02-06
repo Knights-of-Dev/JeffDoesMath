@@ -5,6 +5,10 @@ import tkinter as tk
 def leave():
     root.destroy()
 
+def add(a, b):
+    x = a + b
+    return x
+
 
 
 
