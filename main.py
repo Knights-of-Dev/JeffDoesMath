@@ -9,6 +9,17 @@ def add(a, b):
     x = a + b
     return x
 
+def minus(a, b):
+    x = a - b
+    return x
+
+def times(a, b):
+    x = a * b
+    return x
+
+def divide(a, b):
+    x = a / b
+    return x
 
 
 
