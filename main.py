@@ -7,6 +7,7 @@ dumbness = 20
 
 jeffsayings = {"mrrrrrp", "grrrrrr", "murp", "gurp", "RAWR", "MRRRRRRRRRf", "BLAARGGULARG", "AHHHHbabababababa", "eaaaarrrgghhh", "*shows Ming the Cowculator at https://github.com/Knights-of-Dev/Ming-the-Cowculator*"}
 
+chanceofmess = 10
 
 def error():
     pass
@@ -43,18 +44,21 @@ def divide(a, b):
     return x
 
 def solve():
+    global chanceofmess
     global jeffsayings
     x = entrybox.get()
     x = x.split()
     if x[0] == "r" or x[0] == "R":
         a = int(x[1])
         a = math.radians(a)
-        a =  messup(a)
+        if random.randint(1,chanceofmess) == 1:
+            a =  messup(a)
         awnser.config(text = a)
     elif x[0] == "d" or x[0] == "D":
         a = int(x[1])
         a = math.degrees(a)
-        a =  messup(a)
+        if random.randint(1,chanceofmess) == 1:
+            a =  messup(a)
         awnser.config(text = a)
     else:
         if len(x) == 3:
@@ -82,7 +86,7 @@ def solve():
                 awnser.config(text = d)
         
             if t == True:
-                isdumb = random.randint(1,10)
+                isdumb = random.randint(1,chanceofmess)
                 if isdumb == 1:
                     d = messup(d)
                     awnser.config(text = d)
