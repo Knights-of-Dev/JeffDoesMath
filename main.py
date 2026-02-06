@@ -2,9 +2,9 @@ import tkinter as tk
 import random
 #functions
 
-dumbness = 5
+dumbness = 20
 
-jeffsayings = {"mrrrrrp", "grrrrrr", "murp", "gurp", "RAWR", "MRRRRRRRRRf"}
+jeffsayings = {"mrrrrrp", "grrrrrr", "murp", "gurp", "RAWR", "MRRRRRRRRRf", "BLAARGGULARG", "AHHHHbabababababa", "eaaaarrrgghhh"}
 
 
 def error():
@@ -69,7 +69,7 @@ def solve():
             awnser.config(text = d)
     
         if t == True:
-            isdumb = random.randint(1,2)
+            isdumb = random.randint(1,10)
             if isdumb == 1:
                 d = messup(d)
                 awnser.config(text = d)
@@ -103,5 +103,4 @@ awnser.place(x=0, y=25)
 
 
 root.mainloop()
-
 
