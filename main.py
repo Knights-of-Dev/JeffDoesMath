@@ -5,7 +5,7 @@ import math
 
 dumbness = 20
 
-jeffsayings = {"mrrrrrp", "grrrrrr", "murp", "gurp", "RAWR", "MRRRRRRRRRf", "BLAARGGULARG", "AHHHHbabababababa", "eaaaarrrgghhh", "*shows Ming the Cowculator at https://github.com/Knights-of-Dev/Ming-the-Cowculator*", "glup", "yes math", "no math", "deadpool fren", "gwenpool fren", "I avenger", "grrrr", "I AM VENOMMMMMM"}
+jeffsayings = {"mrrrrrp", "grrrrrr", "murp", "gurp", "RAWR", "MRRRRRRRRRf", "BLAARGGULARG", "AHHHHbabababababa", "eaaaarrrgghhh", "*shows Ming the Cowculator at https://github.com/Knights-of-Dev/Ming-the-Cowculator*", "glup", "yes math", "no math", "deadpool fren", "gwenpool fren", "I avenger", "grrrr", "I AM VENOMMMMMM", "Mrumph?", "Yip!", "Chomp-chomp!", "Mreeeeeee!", "Murp-murp?", "prrrrrrrrr", "Stomp Stomp"}
 
 chanceofmess = 10
 
