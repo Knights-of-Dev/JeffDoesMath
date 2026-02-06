@@ -15,8 +15,35 @@ def error():
 def leave():
     root.destroy()
 
+
 def settings():
-    pass
+    global dumbness
+    global chanceofmess
+
+    def apply():
+        global dumbness
+        global chanceofmess
+        global dumbnessent
+        global chanceofmessent
+        dumbness = dumbnessent.get()
+        chanceofmess = chanceofmessent.get()
+        setwin.destroy()
+
+    setwin = tk.Toplevel(root)
+    setwin.title("JeffDoesMath-Settings")
+    setwin.geometry("200x200")
+
+    applybutton = tk.Button(setwin, text = "apply", command = apply)
+    dumbnessentlabel = tk.Label(setwin, text = "dumbness")
+    dumbnessent = tk.Entry(setwin, width = 5)
+    chanceofmessentlabel = tk.Label(setwin, text = "chance of mess")
+    chanceofmessent = tk.Entry(setwin, width = 5)
+
+    applybutton.place(x=175,y=175)
+    dumbnessentlabel.place(x=0,y=25)
+    dumbnessent.place(x=0,y=50)
+    chanceofmessentlabel.place(x=0,y=100)
+    chanceofmessent.place(x=0,y=125)
 
 def messup(d):
     
@@ -83,37 +110,37 @@ def solve():
             s =  messup(s)
         awnser.config(text = s)
     elif x[0] == "sin":
-        a = x[1]
+        a = int(x[1])
         a = math.sin(a)
         if random.randint(1,chanceofmess) == 1:
             a =  messup(a)
         awnser.config(text = a)
     elif x[0] == "cos":
-        a = x[1]
+        a = int(x[1])
         a = math.cos(a)
         if random.randint(1,chanceofmess) == 1:
             a =  messup(a)
         awnser.config(text = a)
     elif x[0] == "tan":
-        a = x[1]
+        a = int(x[1])
         a = math.tan(a)
         if random.randint(1,chanceofmess) == 1:
             a =  messup(a)
         awnser.config(text = a)
     elif x[0] == "asin" or x[0] == "arcsin":
-        a = x[1]
+        a = int(x[1])
         a = math.asin(a)
         if random.randint(1,chanceofmess) == 1:
             a =  messup(a)
         awnser.config(text = a)
     elif x[0] == "acos" or x[0] == "arccos":
-        a = x[1]
+        a = int(x[1])
         a = math.acos(a)
         if random.randint(1,chanceofmess) == 1:
             a =  messup(a)
         awnser.config(text = a)
     elif x[0] == "atan" or x[0] == "arctan":
-        a = x[1]
+        a = int(x[1])
         a = math.atan(a)
         if random.randint(1,chanceofmess) == 1:
             a =  messup(a)
