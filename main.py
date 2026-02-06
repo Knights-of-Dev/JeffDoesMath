@@ -49,10 +49,12 @@ def solve():
     if x[0] == "r" or x[0] == "R":
         a = int(x[1])
         a = math.radians(a)
+        a =  messup(a)
         awnser.config(text = a)
     elif x[0] == "d" or x[0] == "D":
         a = int(x[1])
         a = math.degrees(a)
+        a =  messup(a)
         awnser.config(text = a)
     else:
         if len(x) == 3:
