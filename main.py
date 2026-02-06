@@ -1,23 +1,26 @@
 import tkinter as tk
 #functions
-def leave:
+
+
+def leave():
     root.destroy()
+
 
 
 
 
 #window set up / settings
 root = tk.Tk()
-root.title("Basic tkinter set up :3")
-root.geometry("300x200")
+root.title("JeffDoesMath")
+root.geometry("200x300")
 
 #widgits being created
-exit = tk.Button(root, command = leave)
-
+exitb = tk.Button(root, command = leave, text = "exit")
+entrybox = tk.Entry(root, width = 15,)
 
 #add widget to windows :3
-exit.grid(row= 3, column= 2)
-
+exitb.place(x=175, y=250)
+entrybox.place(x= 75, y=0)
 
 
 
