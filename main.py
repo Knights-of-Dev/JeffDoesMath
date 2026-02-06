@@ -4,7 +4,7 @@ import random
 
 dumbness = 20
 
-jeffsayings = {"mrrrrrp", "grrrrrr", "murp", "gurp", "RAWR", "MRRRRRRRRRf", "BLAARGGULARG", "AHHHHbabababababa", "eaaaarrrgghhh"}
+jeffsayings = {"mrrrrrp", "grrrrrr", "murp", "gurp", "RAWR", "MRRRRRRRRRf", "BLAARGGULARG", "AHHHHbabababababa", "eaaaarrrgghhh", "*shows Ming the Cowculator at https://github.com/Knights-of-Dev/Ming-the-Cowculator*"}
 
 
 def error():
