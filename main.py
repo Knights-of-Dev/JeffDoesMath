@@ -197,6 +197,7 @@ def solve():
 root = tk.Tk()
 root.title("JeffDoesMath")
 root.geometry("200x300")
+root.iconbitmap("icon.ico")
 
 #widgits being created
 exitb = tk.Button(root, command = leave, text = "exit")
