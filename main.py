@@ -15,6 +15,9 @@ def error():
 def leave():
     root.destroy()
 
+def settings():
+    pass
+
 def messup(d):
     
     global dumbness
@@ -173,9 +176,11 @@ exitb = tk.Button(root, command = leave, text = "exit")
 entrybox = tk.Entry(root, width = 15,)
 solvebutton = tk.Button(root, command = solve, text = "solve")
 awnser = tk.Label(root, text = list(jeffsayings)[0])
+settingsbutton = tk.Button(root, command = settings, text = "settings")
 
 #add widget to windows :3
 exitb.place(x=175, y=250)
+settingsbutton.place(x=175, y=225)
 entrybox.place(x= 0, y=250)
 solvebutton.place(x=0, y=275)
 awnser.place(x=0, y=200)
