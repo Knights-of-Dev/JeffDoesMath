@@ -9,8 +9,8 @@ jeffsayings = {"mrrrrrp", "grrrrrr", "murp", "gurp", "RAWR", "MRRRRRRRRRf", "BLA
 
 chanceofmess = 10
 
-def error():
-    pass
+def error(msg="unknown error"):
+    print(msg)
 
 def leave():
     root.destroy()
